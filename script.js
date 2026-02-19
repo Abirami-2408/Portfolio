@@ -16,7 +16,7 @@ const imageSeq = { frame: 0 };
 
 // Get frame path
 function getFrame(index) {
-  return `frames/ezgif-frame-${String(index).padStart(3, '0')}.jpg`;
+  return `Frames/ezgif-frame-${String(index).padStart(3, '0')}.jpg`;
 }
 
 // Preload images
