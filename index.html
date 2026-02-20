@@ -19,7 +19,7 @@
       overflow-x: hidden;
     }
 
-    /* Background Animation */
+    /* BACKGROUND ANIMATION */
     #bg-animation {
       position: fixed;
       top: 0;
@@ -27,7 +27,7 @@
       width: 100vw;
       height: 100vh;
       object-fit: cover;
-      opacity: 0.08; /* watermark effect */
+      opacity: 0.18; /* more visible */
       z-index: -1;
     }
 
@@ -39,32 +39,37 @@
 
     header {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
 
     header h1 {
-      font-size: 36px;
+      font-size: 40px;
       color: #00ffd5;
+      text-shadow: 0 0 10px rgba(0,255,213,0.7);
     }
 
     header p {
       margin-top: 10px;
       font-size: 18px;
-      color: #ccc;
+      color: #ddd;
     }
 
+    /* 🔥 FULLY TRANSPARENT SECTIONS */
     section {
       margin-bottom: 40px;
       padding: 20px;
-      background: rgba(255, 255, 255, 0.05);
       border-radius: 10px;
-      backdrop-filter: blur(6px);
+
+      background: transparent !important;
+      backdrop-filter: none;
+
+      border: 1px solid rgba(255,255,255,0.08);
     }
 
     h2 {
       color: #00ffd5;
       margin-bottom: 15px;
-      border-bottom: 1px solid #00ffd5;
+      border-bottom: 1px solid rgba(0,255,213,0.4);
       padding-bottom: 5px;
     }
 
@@ -74,6 +79,7 @@
 
     ul li {
       margin-bottom: 10px;
+      line-height: 1.6;
     }
 
     a {
@@ -81,16 +87,15 @@
       text-decoration: none;
     }
 
-    .project-link {
-      font-size: 14px;
-      color: #aaa;
+    a:hover {
+      text-decoration: underline;
     }
 
     footer {
       text-align: center;
       margin-top: 40px;
       font-size: 14px;
-      color: #777;
+      color: #aaa;
     }
 
   </style>
@@ -98,8 +103,8 @@
 
 <body>
 
-  <!-- Background Animation -->
-  <img id="bg-animation" src="Frames/ezgif-frame-001.jpg">
+  <!-- BACKGROUND FRAME ANIMATION -->
+  <img id="bg-animation" src="frames/ezgif-frame-001.jpg">
 
   <div class="container">
 
@@ -108,7 +113,7 @@
       <h1>Abirami R.K</h1>
       <p>Aspiring Software Developer | Java | DSA | Web Development</p>
       <p>
-        📞 8667023353 | 
+        📞 8667023353 |
         📧 <a href="mailto:rk.abirami2005@gmail.com">rk.abirami2005@gmail.com</a> |
         🔗 <a href="https://www.linkedin.com/in/abiramirk/" target="_blank">LinkedIn</a>
       </p>
@@ -118,11 +123,15 @@
     <section>
       <h2>Education</h2>
       <ul>
-        <li><strong>B.E – Electronics and Communication Engineering</strong><br>
-        Government College of Engineering, Tirunelveli (2023 – 2027)</li>
+        <li>
+          <strong>B.E – Electronics and Communication Engineering</strong><br>
+          Government College of Engineering, Tirunelveli (2023 – 2027)
+        </li>
 
-        <li><strong>Higher Secondary Education (HSC)</strong><br>
-        Little Flower Matriculation Higher Secondary School, Tirunelveli (2023)</li>
+        <li>
+          <strong>Higher Secondary Education (HSC)</strong><br>
+          Little Flower Matriculation Higher Secondary School, Tirunelveli (2023)
+        </li>
       </ul>
     </section>
 
@@ -133,8 +142,8 @@
         <li>
           <strong>Travel Website</strong> (HTML, CSS, Bootstrap)<br>
           Built a responsive travel website independently<br>
-          <a href="https://abirami-2408.github.io/Travel-website/index.html" target="_blank">Live Demo</a>
-          <div class="project-link">GitHub: Abirami-2408/Travel-website</div>
+          <a href="https://abirami-2408.github.io/Travel-website/index.html" target="_blank">Live Demo</a><br>
+          <small>GitHub: Abirami-2408/Travel-website</small>
         </li>
       </ul>
     </section>
@@ -162,8 +171,8 @@
         <li>Microsoft & LinkedIn: Career Essentials in Data Analysis</li>
         <li>ENTUDIO Internship</li>
         <li>PPT Presentation at PSN College</li>
-        <li>Tech Expo Project – Automatic Railway Gate System (Arduino)</li>
-        <li>Smart India Hackathon (SIH) Participant</li>
+        <li>Tech Expo Project – Automatic Railway Gate System (Arduino UNO)</li>
+        <li>Smart India Hackathon (SIH) – Participant</li>
       </ul>
     </section>
 
@@ -179,7 +188,7 @@
 
   </div>
 
-  <!-- SCROLL ANIMATION SCRIPT -->
+  <!-- SCROLL-BASED FRAME ANIMATION -->
   <script>
     const totalFrames = 240;
     const img = document.getElementById("bg-animation");
@@ -195,7 +204,7 @@
       );
 
       const frameNumber = String(frameIndex + 1).padStart(3, '0');
-      img.src = `Frames/ezgif-frame-${frameNumber}.jpg`;
+      img.src = `frames/ezgif-frame-${frameNumber}.jpg`;
     });
   </script>
 
