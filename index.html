@@ -2,20 +2,202 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Scroll Animation</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Abirami R.K | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #0d0d0d;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    /* Background Animation */
+    #bg-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      opacity: 0.08; /* watermark effect */
+      z-index: -1;
+    }
+
+    .container {
+      width: 85%;
+      margin: auto;
+      padding: 40px 0;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 36px;
+      color: #00ffd5;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      backdrop-filter: blur(6px);
+    }
+
+    h2 {
+      color: #00ffd5;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #00ffd5;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: #00ffd5;
+      text-decoration: none;
+    }
+
+    .project-link {
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #777;
+    }
+
+  </style>
 </head>
+
 <body>
 
-<!-- Canvas for animation -->
-<canvas id="canvas"></canvas>
+  <!-- Background Animation -->
+  <img id="bg-animation" src="frames/ezgif-frame-001.jpg">
 
-<!-- Scroll space -->
-<div class="scroll-container">
-  <h1>Scroll Down 🔥</h1>
-  <p>Experience the animation</p>
-</div>
+  <div class="container">
 
-<script src="script.js"></script>
+    <!-- HEADER -->
+    <header>
+      <h1>Abirami R.K</h1>
+      <p>Aspiring Software Developer | Java | DSA | Web Development</p>
+      <p>
+        📞 8667023353 | 
+        📧 <a href="mailto:rk.abirami2005@gmail.com">rk.abirami2005@gmail.com</a> |
+        🔗 <a href="https://www.linkedin.com/in/abiramirk/" target="_blank">LinkedIn</a>
+      </p>
+    </header>
+
+    <!-- EDUCATION -->
+    <section>
+      <h2>Education</h2>
+      <ul>
+        <li><strong>B.E – Electronics and Communication Engineering</strong><br>
+        Government College of Engineering, Tirunelveli (2023 – 2027)</li>
+
+        <li><strong>Higher Secondary Education (HSC)</strong><br>
+        Little Flower Matriculation Higher Secondary School, Tirunelveli (2023)</li>
+      </ul>
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <strong>Travel Website</strong> (HTML, CSS, Bootstrap)<br>
+          Built a responsive travel website independently<br>
+          <a href="https://abirami-2408.github.io/Travel-website/index.html" target="_blank">Live Demo</a>
+          <div class="project-link">GitHub: Abirami-2408/Travel-website</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- SKILLS -->
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>Java Programming</li>
+        <li>Python</li>
+        <li>HTML5, CSS3</li>
+        <li>Bootstrap 5</li>
+        <li>JavaScript (Basics)</li>
+        <li>SQL Programming</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </section>
+
+    <!-- ADDITIONAL -->
+    <section>
+      <h2>Additional Experience</h2>
+      <ul>
+        <li>NPTEL: Data Science for Engineers</li>
+        <li>TechSaksham: Industry 4.0 Foundation Course</li>
+        <li>Microsoft & LinkedIn: Career Essentials in Data Analysis</li>
+        <li>ENTUDIO Internship</li>
+        <li>PPT Presentation at PSN College</li>
+        <li>Tech Expo Project – Automatic Railway Gate System (Arduino)</li>
+        <li>Smart India Hackathon (SIH) Participant</li>
+      </ul>
+    </section>
+
+    <!-- LANGUAGES -->
+    <section>
+      <h2>Languages</h2>
+      <p>English, Tamil</p>
+    </section>
+
+    <footer>
+      © 2026 Abirami R.K | Portfolio
+    </footer>
+
+  </div>
+
+  <!-- SCROLL ANIMATION SCRIPT -->
+  <script>
+    const totalFrames = 240;
+    const img = document.getElementById("bg-animation");
+
+    window.addEventListener("scroll", () => {
+      const scrollTop = window.scrollY;
+      const maxScroll = document.body.scrollHeight - window.innerHeight;
+
+      const scrollFraction = scrollTop / maxScroll;
+      const frameIndex = Math.min(
+        totalFrames - 1,
+        Math.floor(scrollFraction * totalFrames)
+      );
+
+      const frameNumber = String(frameIndex + 1).padStart(3, '0');
+      img.src = `frames/ezgif-frame-${frameNumber}.jpg`;
+    });
+  </script>
+
 </body>
 </html>
