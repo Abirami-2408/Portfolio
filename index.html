@@ -19,7 +19,6 @@
       overflow-x: hidden;
     }
 
-    /* BACKGROUND ANIMATION */
     #bg-animation {
       position: fixed;
       top: 0;
@@ -27,7 +26,7 @@
       width: 100vw;
       height: 100vh;
       object-fit: cover;
-      opacity: 0.18; /* more visible */
+      opacity: 0.18;
       z-index: -1;
     }
 
@@ -54,15 +53,12 @@
       color: #ddd;
     }
 
-    /* 🔥 FULLY TRANSPARENT SECTIONS */
     section {
       margin-bottom: 40px;
       padding: 20px;
       border-radius: 10px;
-
       background: transparent !important;
       backdrop-filter: none;
-
       border: 1px solid rgba(255,255,255,0.08);
     }
 
@@ -97,18 +93,16 @@
       font-size: 14px;
       color: #aaa;
     }
-
   </style>
 </head>
 
 <body>
 
-  <!-- BACKGROUND FRAME ANIMATION -->
+  <!-- ✅ Updated Folder Name -->
   <img id="bg-animation" src="Frames/ezgif-frame-001.jpg">
 
   <div class="container">
 
-    <!-- HEADER -->
     <header>
       <h1>Abirami R.K</h1>
       <p>Aspiring Software Developer | Java | DSA | Web Development</p>
@@ -119,36 +113,28 @@
       </p>
     </header>
 
-    <!-- EDUCATION -->
     <section>
       <h2>Education</h2>
       <ul>
-        <li>
-          <strong>B.E – Electronics and Communication Engineering</strong><br>
-          Government College of Engineering, Tirunelveli (2023 – 2027)
-        </li>
+        <li><strong>B.E – Electronics and Communication Engineering</strong><br>
+        Government College of Engineering, Tirunelveli (2023 – 2027)</li>
 
-        <li>
-          <strong>Higher Secondary Education (HSC)</strong><br>
-          Little Flower Matriculation Higher Secondary School, Tirunelveli (2023)
-        </li>
+        <li><strong>Higher Secondary Education (HSC)</strong><br>
+        Little Flower Matriculation Higher Secondary School (2023)</li>
       </ul>
     </section>
 
-    <!-- PROJECTS -->
     <section>
       <h2>Projects</h2>
       <ul>
         <li>
-          <strong>Travel Website</strong> (HTML, CSS, Bootstrap)<br>
-          Built a responsive travel website independently<br>
-          <a href="https://abirami-2408.github.io/Travel-website/index.html" target="_blank">Live Demo</a><br>
-          <small>GitHub: Abirami-2408/Travel-website</small>
+          <strong>Travel Website</strong><br>
+          Built using HTML, CSS, Bootstrap<br>
+          <a href="https://abirami-2408.github.io/Travel-website/index.html" target="_blank">Live Demo</a>
         </li>
       </ul>
     </section>
 
-    <!-- SKILLS -->
     <section>
       <h2>Skills</h2>
       <ul>
@@ -162,33 +148,28 @@
       </ul>
     </section>
 
-    <!-- ADDITIONAL -->
     <section>
       <h2>Additional Experience</h2>
       <ul>
         <li>NPTEL: Data Science for Engineers</li>
         <li>TechSaksham: Industry 4.0 Foundation Course</li>
-        <li>Microsoft & LinkedIn: Career Essentials in Data Analysis</li>
+        <li>Microsoft & LinkedIn: Career Essentials</li>
         <li>ENTUDIO Internship</li>
-        <li>PPT Presentation at PSN College</li>
-        <li>Tech Expo Project – Automatic Railway Gate System (Arduino UNO)</li>
-        <li>Smart India Hackathon (SIH) – Participant</li>
+        <li>Smart India Hackathon Participant</li>
       </ul>
     </section>
 
-    <!-- LANGUAGES -->
     <section>
       <h2>Languages</h2>
       <p>English, Tamil</p>
     </section>
 
     <footer>
-      © 2026 Abirami R.K | Portfolio
+      © 2026 Abirami R.K
     </footer>
 
   </div>
 
-  <!-- SCROLL-BASED FRAME ANIMATION -->
   <script>
     const totalFrames = 240;
     const img = document.getElementById("bg-animation");
@@ -204,6 +185,8 @@
       );
 
       const frameNumber = String(frameIndex + 1).padStart(3, '0');
+
+      // ✅ Updated Folder Name
       img.src = `Frames/ezgif-frame-${frameNumber}.jpg`;
     });
   </script>
